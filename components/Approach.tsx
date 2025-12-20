@@ -61,6 +61,10 @@ const Approach = () => {
           />
         </Card>
       </div>
+      {/* Section Divider */}
+      <div className="flex justify-center mt-20">
+        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-500/60 to-transparent"></div>
+      </div>
     </section>
   );
 };
