@@ -119,7 +119,7 @@ const Experience = () => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">
                     {item.location}
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-center">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-left whitespace-pre-line">
                     {item.description}
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
