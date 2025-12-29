@@ -61,12 +61,15 @@ const Experience = () => {
         My <span className="text-purple">Work Experience</span>
       </h1>
 
-      <div className="relative max-w-6xl mx-auto">
-        {/* Vertical Timeline Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-400/30 dark:bg-gray-600/40"></div>
+      <div className="relative max-w-6xl mx-auto px-4">
+        {/* Vertical Timeline Line - Hidden on mobile, visible on md+ */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-400/30 dark:bg-gray-600/40"></div>
+
+        {/* Mobile Timeline Line - Visible only on mobile */}
+        <div className="md:hidden absolute left-8 w-1 h-full bg-gray-400/30 dark:bg-gray-600/40"></div>
 
         {/* Timeline Items */}
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {experienceData.map((item, index) => (
             <motion.div
               key={item.id}
@@ -74,12 +77,30 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className={`flex items-center ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-              } gap-8`}
+              className={`flex flex-col md:flex-row md:items-center ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-4 md:gap-8`}
             >
+              {/* Mobile Layout - Icon and Date at top */}
+              <div className="flex md:hidden items-center gap-4 mb-2">
+                {/* Timeline Icon */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
+                  className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg shrink-0"
+                >
+                  <FaBriefcase className="text-white text-xl" />
+                </motion.div>
+                {/* Date */}
+                <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                  {item.period}
+                </p>
+              </div>
+
               {/* Card */}
-              <div className={`w-[calc(50%-2rem)]`}>
+              <div className={`w-full md:w-[calc(50%-2rem)] pl-20 md:pl-0`}>
                 <motion.div
                   whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)" }}
                   className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 transition-all duration-300"
@@ -114,8 +135,8 @@ const Experience = () => {
                 </motion.div>
               </div>
 
-              {/* Timeline Icon */}
-              <div className="relative z-10 flex items-center justify-center">
+              {/* Desktop Timeline Icon - Hidden on mobile */}
+              <div className="hidden md:flex relative z-10 items-center justify-center">
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -127,8 +148,8 @@ const Experience = () => {
                 </motion.div>
               </div>
 
-              {/* Date */}
-              <div className={`w-[calc(50%-2rem)] flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+              {/* Desktop Date - Hidden on mobile */}
+              <div className={`hidden md:flex md:w-[calc(50%-2rem)] ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
                 <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
                   {item.period}
                 </p>

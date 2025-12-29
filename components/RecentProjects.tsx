@@ -88,7 +88,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2] max-w-sm w-full mx-auto relative lg:h-[28rem] rounded-3xl overflow-hidden"
+       dark:border-white/[0.2] max-w-sm w-full mx-auto relative h-[28rem] rounded-3xl overflow-hidden"
       style={{
         background: "rgb(4,7,29)",
         backgroundColor:
