@@ -23,8 +23,8 @@ const experienceData: ExperienceItem[] = [
     companyUrl: "https://www.dymation.com/",
     location: "Milan, Italy",
     period: "May 2023 - Present",
-    description: "Built 35+ Emulate3D digital twins for automated warehouse systems, reducing simulation development time from 3 months to 1 week (75% improvement) through reusable C# and Python frameworks and modular architecture patterns",
-    skills: ["Emulate3D", "C#", "Python", "Digital Twin", "Warehouse Automation"]
+    description: "Leading automation and digital twin development for warehouse robotics systems across Europe. Key achievements include:\n\n• Built 35+ Emulate3D digital twins for automated warehouses, reducing simulation development time from 3 months to 1 week (92% improvement) through reusable C# frameworks and modular architecture\n\n• Developed AMR traffic management algorithms increasing warehouse throughput by 5-10%, deployed across 8 production facilities while optimizing fleet sizing\n\n• Integrated Siemens TIA Portal and Beckhoff TwinCAT PLCs with Emulate3D simulations, reducing on-site commissioning time by 10%\n\n• Created immersive VR demonstrations in NVIDIA Omniverse for pre-sales presentations, enabling customers to visualize automation solutions\n\n• Leading ROS2 integration for Emulate3D platform, enabling real-world AMR navigation algorithm testing in virtual environments",
+    skills: ["Emulate3D", "C#", "Python", "ROS2", "Digital Twin", "AMR/AGV", "Warehouse Automation", "Virtual Commissioning", "PLC Integration", "NVIDIA Omniverse", "FMEA", "Six Sigma"]
   },
   {
     id: 2,
@@ -33,8 +33,8 @@ const experienceData: ExperienceItem[] = [
     companyUrl: "https://www.dymation.com/",
     location: "Milan, Italy",
     period: "Oct 2022 - May 2023",
-    description: "Developed AMR traffic management algorithms in C# that increased warehouse throughput from 140 to 150 pallets/hour (7% improvement), with 8 production deployments optimizing fleet sizing from 18 to 15 vehicles while maintaining performance",
-    skills: ["C#", "AMR", "Traffic Management", "Algorithm Design", "Performance Optimization"]
+    description: "Master's thesis focused on virtual commissioning for automatic systems in the intralogistics field. Research contributions:\n\n• Developed custom OPC UA server implementation in C# mimicking WMS behavior for bi-directional data exchange between Emulate3D simulation and control systems\n\n• Designed TCP-based peer-to-peer messaging protocol for direct AMR-to-AMR communication enabling real-time traffic coordination, deadlock prevention, and dynamic path re-routing\n\n• Optimized job management logic and material flow algorithms improving simulated warehouse throughput by 7%, with recommendations successfully implemented in actual production facility\n\n• Implemented and tested multiple industrial protocols (HTTP, MQTT, TCP/IP, OPC UA) for middleware connectivity",
+    skills: ["C#", "OPC UA", "MQTT", "TCP/IP", "HTTP", "Virtual Commissioning", "Emulate3D", "PLC Integration", "AMR Communication Protocols", "Industrial Middleware", "Warehouse Optimization"]
   }
 ];
 

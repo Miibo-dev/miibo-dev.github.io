@@ -62,7 +62,7 @@ const Hero = () => {
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 group"
             >
               <FaFileDownload className="text-xl text-green-400 group-hover:scale-110 transition-transform" />
-              <span className="text-white/80 group-hover:text-white">Download CV</span>
+              <span className="text-white/80 group-hover:text-white">CV</span>
             </a>
 
             <a
