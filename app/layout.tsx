@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Public_Sans, DM_Serif_Display } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({
+const publicSans = Public_Sans({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"]
+  variable: "--font-public-sans",
+  weight: ["300", "400", "500", "600", "700"]
+});
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-dm-serif",
+  weight: ["400"]
 });
 
 export const metadata: Metadata = {
@@ -24,9 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} ${inter.className}`}>
+      <body className={`${publicSans.variable} ${dmSerif.variable} ${publicSans.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -29,8 +29,8 @@ const config = {
       colors: {
         black: {
           DEFAULT: "#000",
-          100: "#000319",
-          200: "rgba(17, 25, 40, 0.75)",
+          100: "#141516", // Luther's black
+          200: "rgba(20, 21, 22, 0.75)",
           300: "rgba(255, 255, 255, 0.125)",
         },
         white: {
@@ -42,6 +42,11 @@ const config = {
           "100": "#E4ECFF",
         },
         purple: "#CBACF9",
+        gold: {
+          DEFAULT: "#eabe7c", // Luther's golden accent
+          dark: "#d4a866",
+          light: "#f5d9a8",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -80,6 +85,10 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['var(--font-public-sans)', 'sans-serif'],
+        serif: ['var(--font-dm-serif)', 'serif'],
       },
       keyframes: {
         "accordion-down": {

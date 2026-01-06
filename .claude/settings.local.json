@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(xcopy:*)",
+      "Bash(copy \"C:\\\\Users\\\\miibo\\\\OneDrive\\\\Desktop\\\\Pages\\\\pexels-pavel-danilyuk-8438865.jpg\" \"public\\\\images\\\\home-bg.jpg\")",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:miibo-dev.github.io)"
     ]
   }
 }
