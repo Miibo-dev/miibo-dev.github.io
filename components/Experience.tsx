@@ -72,7 +72,7 @@ const Experience = () => {
                       <p className="text-sm text-white/60 uppercase tracking-wider mb-3 font-sans">
                         {item.period}
                       </p>
-                      <p className="font-sans text-white/80 leading-relaxed">
+                      <p className="font-sans text-white/80 leading-relaxed text-left">
                         {item.desc}
                       </p>
                     </div>
