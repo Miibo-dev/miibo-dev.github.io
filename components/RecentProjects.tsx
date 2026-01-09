@@ -15,7 +15,7 @@ interface Project {
   color: string;
   animationSpeed: number;
   colors?: number[][];
-  category: string;
+  categories: string[];
 }
 
 const projectsData: Project[] = [
@@ -27,7 +27,7 @@ const projectsData: Project[] = [
     github: "https://github.com/Miibo-dev/warehouse-automation-digital-twin",
     color: "bg-emerald-900",
     animationSpeed: 5.1,
-    category: "Digital Twin",
+    categories: ["Digital Twin"],
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const projectsData: Project[] = [
       [255, 166, 158],
       [221, 255, 247],
     ],
-    category: "Digital Twin",
+    categories: ["Digital Twin", "ROS"],
   },
   {
     id: 3,
@@ -52,24 +52,24 @@ const projectsData: Project[] = [
     color: "bg-sky-600",
     animationSpeed: 3,
     colors: [[125, 211, 252]],
-    category: "Digital Twin",
+    categories: ["ROS"],
   },
 ];
 
-const categories = ["All", "Digital Twin"];
+const categories = ["All", "Digital Twin", "ROS"];
 
 const RecentProjects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filteredProjects = activeFilter === "All"
     ? projectsData
-    : projectsData.filter(project => project.category === activeFilter);
+    : projectsData.filter(project => project.categories.includes(activeFilter));
 
   return (
     <section id="projects" className="w-full pb-20 pt-6 relative">
       {/* Section Divider */}
       <div className="flex justify-center mb-20 pt-20 relative z-10">
-        <div className="w-3/4 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
+        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent shadow-[0_0_8px_rgba(168,85,247,0.4)]"></div>
       </div>
 
       {/* Spotlight */}
@@ -90,13 +90,14 @@ const RecentProjects = () => {
           <button
             key={category}
             onClick={() => setActiveFilter(category)}
-            className={`px-6 py-3 rounded-full font-sans transition-all duration-300 ${
-              activeFilter === category
-                ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/50'
-                : 'bg-white/5 text-white/60 hover:bg-white/10 border border-white/10'
+            className={`relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none transition-all duration-300 ${
+              activeFilter === category ? 'opacity-100' : 'opacity-60 hover:opacity-80'
             }`}
           >
-            {category}
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-6 text-sm font-medium text-white backdrop-blur-3xl font-sans">
+              {category}
+            </span>
           </button>
         ))}
       </div>
@@ -180,10 +181,13 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/20 hover:bg-white/30 border border-white/40 transition-all duration-300 group/btn backdrop-blur-sm"
+              className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
-              <FaGithub className="text-xl text-white group-hover/btn:scale-110 transition-transform" />
-              <span className="text-white font-semibold">View on GitHub</span>
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-6 text-sm font-medium text-white backdrop-blur-3xl gap-2">
+                <FaGithub className="text-xl" />
+                <span className="font-semibold">View on GitHub</span>
+              </span>
             </a>
           </div>
         </div>

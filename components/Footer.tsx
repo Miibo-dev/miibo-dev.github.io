@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full min-h-[100vh] flex flex-col relative pt-6" id="contact">
       {/* Section Divider */}
       <div className="flex justify-center mb-20 pt-20 relative z-10">
-        <div className="w-3/4 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
+        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent shadow-[0_0_8px_rgba(168,85,247,0.4)]"></div>
       </div>
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">

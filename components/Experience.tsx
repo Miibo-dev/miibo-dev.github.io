@@ -43,7 +43,7 @@ const Experience = () => {
     <div id="experience" className="pb-20 w-full pt-8 relative">
       {/* Section Divider */}
       <div className="flex justify-center mb-20 pt-20 relative z-10">
-        <div className="w-3/4 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
+        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent shadow-[0_0_8px_rgba(168,85,247,0.4)]"></div>
       </div>
       {/* Spotlight from top right to bottom middle */}
       <div>
@@ -82,19 +82,19 @@ const Experience = () => {
               } gap-4 md:gap-8`}
             >
               {/* Mobile Layout - Icon and Date at top */}
-              <div className="flex md:hidden items-center gap-4 mb-2">
-                {/* Timeline Icon */}
+              <div className="flex md:hidden items-center gap-4 mb-2 relative">
+                {/* Timeline Icon - Aligned with vertical line */}
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                  className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg shrink-0"
+                  className="absolute left-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg"
                 >
                   <FaBriefcase className="text-white text-xl" />
                 </motion.div>
                 {/* Date */}
-                <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 ml-20">
                   {item.period}
                 </p>
               </div>
@@ -119,9 +119,12 @@ const Experience = () => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">
                     {item.location}
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-left whitespace-pre-line">
+                  <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-left whitespace-pre-line">
                     {item.description}
                   </p>
+                  {/* Separator line */}
+                  <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-purple-300 dark:via-purple-700 to-transparent mb-4"></div>
+                  {/* Skills tags */}
                   <div className="flex flex-wrap gap-2 justify-center">
                     {item.skills.map((skill, idx) => (
                       <span

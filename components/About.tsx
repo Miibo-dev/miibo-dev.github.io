@@ -28,7 +28,7 @@ export default function About() {
     <section id="about" className="relative py-20">
       {/* Section Divider */}
       <div className="flex justify-center mb-20 relative z-10">
-        <div className="w-3/4 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
+        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent shadow-[0_0_8px_rgba(168,85,247,0.4)]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-8">
@@ -106,10 +106,13 @@ export default function About() {
                 <a
                   href="/cv.pdf"
                   download
-                  className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-xl transition-all duration-300 group"
+                  className="relative inline-flex h-14 w-full overflow-hidden rounded-lg p-[1px] focus:outline-none"
                 >
-                  <FaFileDownload className="text-xl group-hover:scale-110 transition-transform" />
-                  <span className="font-semibold font-sans">Download CV</span>
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-6 text-sm font-medium text-white backdrop-blur-3xl gap-3 font-sans">
+                    <FaFileDownload className="text-xl" />
+                    <span className="font-semibold">Download CV</span>
+                  </span>
                 </a>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -117,20 +120,26 @@ export default function About() {
                     href="https://www.linkedin.com/in/mohammad-bahrami"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 font-sans"
+                    className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none"
                   >
-                    <FaLinkedin className="text-blue-400" />
-                    <span>LinkedIn</span>
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-4 text-sm font-medium text-white backdrop-blur-3xl gap-2 font-sans">
+                      <FaLinkedin className="text-blue-400" />
+                      <span>LinkedIn</span>
+                    </span>
                   </a>
 
                   <a
                     href="https://github.com/miibo-dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 font-sans"
+                    className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none"
                   >
-                    <FaGithub className="text-purple-400" />
-                    <span>GitHub</span>
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-4 text-sm font-medium text-white backdrop-blur-3xl gap-2 font-sans">
+                      <FaGithub className="text-purple-400" />
+                      <span>GitHub</span>
+                    </span>
                   </a>
                 </div>
               </div>
