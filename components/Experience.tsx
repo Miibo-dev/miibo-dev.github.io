@@ -87,7 +87,7 @@ const Experience = () => {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                className="md:hidden absolute top-0 left-8 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg z-10"
+                className="md:hidden absolute top-0 left-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg z-10"
               >
                 <FaBriefcase className="text-white text-xl" />
               </motion.div>
