@@ -77,24 +77,24 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className={`flex flex-col md:flex-row md:items-center ${
+              className={`relative flex flex-col md:flex-row md:items-center ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-4 md:gap-8`}
             >
-              {/* Mobile Layout - Icon and Date at top */}
-              <div className="flex md:hidden items-center gap-4 mb-2 relative">
-                {/* Timeline Icon - Aligned with vertical line */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                  className="absolute left-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg"
-                >
-                  <FaBriefcase className="text-white text-xl" />
-                </motion.div>
-                {/* Date */}
-                <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 ml-20">
+              {/* Mobile Layout - Icon positioned absolutely to align with timeline */}
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
+                className="md:hidden absolute left-0 top-0 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg z-10"
+              >
+                <FaBriefcase className="text-white text-xl" />
+              </motion.div>
+
+              {/* Mobile Date */}
+              <div className="md:hidden pl-20 mb-2">
+                <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
                   {item.period}
                 </p>
               </div>

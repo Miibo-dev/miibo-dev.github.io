@@ -6,15 +6,16 @@ interface InterestCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  iconColor: string;
 }
 
-function InterestCard({ icon, title, description }: InterestCardProps) {
+function InterestCard({ icon, title, description, iconColor }: InterestCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       className="bg-black-100 border border-white/10 rounded-xl p-4 text-center group hover:border-purple-500/50 transition-all duration-300"
     >
-      <div className="text-3xl mb-2 group-hover:scale-110 transition-transform text-purple-400">
+      <div className={`text-3xl mb-2 group-hover:scale-110 transition-transform ${iconColor}`}>
         {icon}
       </div>
       <h5 className="font-semibold text-sm mb-1 font-sans">{title}</h5>
@@ -70,16 +71,19 @@ export default function About() {
                   icon={<FaPlane />}
                   title="Travel"
                   description="Exploring Milan & Italy"
+                  iconColor="text-blue-400"
                 />
                 <InterestCard
                   icon={<FaGuitar />}
                   title="Music"
                   description="Playing guitar"
+                  iconColor="text-pink-400"
                 />
                 <InterestCard
                   icon={<FaLightbulb />}
                   title="Learning"
                   description="New technologies"
+                  iconColor="text-purple-400"
                 />
               </div>
             </div>
