@@ -1,11 +1,11 @@
 import { FaLinkedin, FaGithub, FaFileDownload } from "react-icons/fa";
 import { Spotlight } from "./ui/Spotlight";
-import Guitar3D from "./ui/Guitar3D";
+import Robot3D from "./ui/Robot3D";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="home" className="pt-32 relative min-h-screen">
+    <div id="home" className="pt-32 relative h-screen max-h-[1080px] min-h-[600px]">
       {/* Background image with reduced opacity */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -34,7 +34,7 @@ const Hero = () => {
 
       {/* Grid background */}
       <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+        className="h-full w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
       >
         <div
@@ -44,14 +44,14 @@ const Hero = () => {
       </div>
 
       {/* Two-column layout */}
-      <div className="relative z-10 min-h-screen flex justify-start pt-0 md:pt-0">
-        <div className="max-w-7xl mx-auto w-full px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 h-full flex items-center pt-0 md:pt-0">
+        <div className="max-w-7xl mx-auto w-full px-8 pl-4">
+          <div className="grid lg:grid-cols-[45%_55%] gap-6 items-center">
             {/* Left Column: Text Content */}
-            <div className="space-y-6 mt-[-4rem]">
+            <div className="space-y-6 pl-12">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight">
-                Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient">smarter automation systems</span>
-                {" "}through <span className="text-blue-400">simulation</span>, <span className="text-violet-400">integration</span>, and <span className="text-pink-400">innovation</span>.
+                Building <span className="text-white">smarter automation systems</span>
+                {" "}through <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient">simulation</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 animate-gradient">integration</span>, & <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-gradient">innovation</span>.
               </h1>
 
               <div className="flex items-center gap-4">
@@ -71,9 +71,9 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Column: 3D Guitar */}
-            <div className="h-[400px] lg:h-[600px] relative pt-10">
-              <Guitar3D />
+            {/* Right Column: 3D Robot - Bigger and shifted right */}
+            <div className="h-[450px] lg:h-[700px] relative pl-16">
+              <Robot3D />
             </div>
           </div>
         </div>

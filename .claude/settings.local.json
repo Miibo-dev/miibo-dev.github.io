@@ -5,7 +5,15 @@
       "Bash(xcopy:*)",
       "Bash(copy \"C:\\\\Users\\\\miibo\\\\OneDrive\\\\Desktop\\\\Pages\\\\pexels-pavel-danilyuk-8438865.jpg\" \"public\\\\images\\\\home-bg.jpg\")",
       "Bash(npm run build:*)",
-      "WebFetch(domain:miibo-dev.github.io)"
+      "WebFetch(domain:miibo-dev.github.io)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t 10)",
+      "mcp__ide__getDiagnostics",
+      "Bash(timeout:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(dir:*)",
+      "Bash(git mv:*)"
     ]
   }
 }

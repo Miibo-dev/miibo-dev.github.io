@@ -25,10 +25,10 @@ function InterestCard({ icon, title, description }: InterestCardProps) {
 
 export default function About() {
   return (
-    <section id="about" className="relative">
+    <section id="about" className="relative py-20">
       {/* Section Divider */}
-      <div className="flex justify-center mb-16">
-        <div className="w-3/4 h-[2px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+      <div className="flex justify-center mb-20 relative z-10">
+        <div className="w-3/4 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-8">

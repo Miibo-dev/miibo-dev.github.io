@@ -170,6 +170,9 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
+    company: "Tech Company",
+    location: "Remote",
+    period: "Jan 2023 - Jun 2023",
     desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
@@ -177,20 +180,29 @@ export const workExperience = [
   {
     id: 2,
     title: "Mobile App Dev - JSM Tech",
+    company: "JSM Tech",
+    location: "Remote",
+    period: "Jul 2022 - Dec 2022",
     desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Freelance App Dev Project",
+    company: "Freelance",
+    location: "Remote",
+    period: "Jan 2022 - Jun 2022",
     desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "Lead Frontend Developer",
+    company: "Development Agency",
+    location: "Remote",
+    period: "2021 - 2022",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
