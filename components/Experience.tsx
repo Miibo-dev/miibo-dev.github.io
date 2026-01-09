@@ -81,15 +81,6 @@ const Experience = () => {
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-4 md:gap-8`}
             >
-              {/* Mobile Layout - Simple dot on timeline */}
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                className="md:hidden absolute top-0 left-8 -translate-x-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 border-4 border-white dark:border-gray-900 shadow-lg z-10"
-              />
-
               {/* Mobile Date */}
               <div className="md:hidden pl-12 mb-2">
                 <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
