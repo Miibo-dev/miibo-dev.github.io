@@ -6,7 +6,7 @@ import { STLLoader } from 'three/addons/loaders/STLLoader.js';
 import * as THREE from 'three';
 
 function RobotModel() {
-  const meshRef = useRef<THREE.Mesh>();
+  const meshRef = useRef<THREE.Mesh>(null);
   const [rotationY, setRotationY] = useState(0); // 45 degrees initial rotation
 
   // Load STL model
