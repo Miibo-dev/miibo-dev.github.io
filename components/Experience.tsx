@@ -81,26 +81,24 @@ const Experience = () => {
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-4 md:gap-8`}
             >
-              {/* Mobile Layout - Icon positioned absolutely to align with timeline */}
+              {/* Mobile Layout - Simple dot on timeline */}
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
-                className="md:hidden absolute top-0 left-8 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg z-10"
-              >
-                <FaBriefcase className="text-white text-xl" />
-              </motion.div>
+                className="md:hidden absolute top-0 left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 shadow-lg z-10"
+              />
 
               {/* Mobile Date */}
-              <div className="md:hidden pl-24 mb-2">
+              <div className="md:hidden pl-12 mb-2">
                 <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
                   {item.period}
                 </p>
               </div>
 
               {/* Card */}
-              <div className={`w-full md:w-[calc(50%-2rem)] pl-24 md:pl-0`}>
+              <div className={`w-full md:w-[calc(50%-2rem)] pl-12 md:pl-0`}>
                 <motion.div
                   whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)" }}
                   className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 transition-all duration-300"
