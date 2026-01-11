@@ -94,7 +94,7 @@ export default function About() {
               <div className="bg-black-100 border border-white/10 rounded-2xl p-8">
                 <h4 className="font-serif text-2xl mb-6">Expertise</h4>
                 <div className="flex flex-wrap gap-3">
-                  {['Digital Twin', 'Industrial Automation', 'PLC Programming', 'SCADA Systems', 'IoT Integration', 'System Simulation'].map(skill => (
+                  {['Digital Twin', 'Warehouse Automation', 'Virtual Commissioning', 'AMR/AGV Systems', 'PLC Integration', 'ROS2 Integration'].map(skill => (
                     <span
                       key={skill}
                       className="px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 font-sans"
@@ -149,9 +149,9 @@ export default function About() {
               </div>
 
               {/* Currently Seeking */}
-              <div className="bg-gradient-to-br from-gold/20 to-purple-500/20 border border-gold/30 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-2xl p-6">
                 <p className="text-white/90 font-sans leading-relaxed">
-                  <span className="font-semibold text-gold">Currently seeking opportunities</span> in automation, robotics, and digital twin projects.
+                  <span className="font-semibold text-purple-300">Currently seeking opportunities</span> in automation, robotics, and digital twin projects.
                 </p>
               </div>
             </div>
