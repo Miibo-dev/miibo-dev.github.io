@@ -1,25 +1,115 @@
 'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaFileDownload, FaGuitar, FaPlane, FaLightbulb } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
+import { IoAirplaneOutline, IoBulbOutline } from 'react-icons/io5';
+import { PiGuitarLight } from 'react-icons/pi';
 
 interface InterestCardProps {
-  icon: React.ReactNode;
+  icon: (isHovered: boolean) => React.ReactNode;
   title: string;
   description: string;
   iconColor: string;
 }
 
+// Animated Icon Components
+function AnimatedAirplane({ isHovered }: { isHovered: boolean }) {
+  return (
+    <motion.div
+      className="text-blue-400"
+      initial={{ x: 0, opacity: 0.6 }}
+      animate={
+        isHovered
+          ? {
+              x: [0, 40, 40],
+              opacity: [0.6, 1, 0],
+            }
+          : {
+              x: 0,
+              opacity: 0.6,
+            }
+      }
+      transition={{
+        duration: 1.5,
+        ease: "easeInOut",
+        times: isHovered ? [0, 0.7, 1] : undefined,
+      }}
+    >
+      <IoAirplaneOutline />
+    </motion.div>
+  );
+}
+
+function AnimatedGuitar({ isHovered }: { isHovered: boolean }) {
+  return (
+    <motion.div
+      className="text-pink-400"
+      initial={{ rotate: 0, opacity: 0.6 }}
+      animate={
+        isHovered
+          ? {
+              rotate: [0, -2, 2, -2, 2, -2, 2, -1, 1, 0],
+              opacity: 1,
+            }
+          : {
+              rotate: 0,
+              opacity: 0.6,
+            }
+      }
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+    >
+      <PiGuitarLight />
+    </motion.div>
+  );
+}
+
+function AnimatedLightbulb({ isHovered }: { isHovered: boolean }) {
+  return (
+    <motion.div
+      className="text-purple-400"
+      initial={{
+        opacity: 0.6,
+        filter: 'drop-shadow(0 0 0px rgba(168, 85, 247, 0))',
+      }}
+      animate={
+        isHovered
+          ? {
+              opacity: 1,
+              filter: 'drop-shadow(0 0 12px rgba(168, 85, 247, 0.9))',
+            }
+          : {
+              opacity: 0.6,
+              filter: 'drop-shadow(0 0 0px rgba(168, 85, 247, 0))',
+            }
+      }
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut",
+      }}
+    >
+      <IoBulbOutline />
+    </motion.div>
+  );
+}
+
 function InterestCard({ icon, title, description, iconColor }: InterestCardProps) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="bg-black-100 border border-white/10 rounded-xl p-4 text-center group hover:border-purple-500/50 transition-all duration-300"
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      className="bg-black-100 border border-white/10 rounded-xl p-3 sm:p-4 text-center group hover:border-purple-500/50 transition-all duration-300"
     >
-      <div className={`text-3xl mb-2 group-hover:scale-110 transition-transform ${iconColor}`}>
-        {icon}
+      <div className="text-2xl sm:text-3xl mb-2">
+        {icon(isHovered)}
       </div>
-      <h5 className="font-semibold text-sm mb-1 font-sans">{title}</h5>
-      <p className="text-xs text-white/60 font-sans">{description}</p>
+      <h5 className="font-semibold text-xs sm:text-sm mb-1 font-sans">{title}</h5>
+      <p className="text-[10px] sm:text-xs text-white/60 font-sans leading-tight break-words">{description}</p>
     </motion.div>
   );
 }
@@ -66,21 +156,21 @@ export default function About() {
               </div>
 
               {/* Interests Grid */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 <InterestCard
-                  icon={<FaPlane />}
+                  icon={(isHovered) => <AnimatedAirplane isHovered={isHovered} />}
                   title="Travel"
-                  description="Exploring Milan & Italy"
+                  description="Exploring Europe"
                   iconColor="text-blue-400"
                 />
                 <InterestCard
-                  icon={<FaGuitar />}
+                  icon={(isHovered) => <AnimatedGuitar isHovered={isHovered} />}
                   title="Music"
                   description="Playing guitar"
                   iconColor="text-pink-400"
                 />
                 <InterestCard
-                  icon={<FaLightbulb />}
+                  icon={(isHovered) => <AnimatedLightbulb isHovered={isHovered} />}
                   title="Learning"
                   description="New technologies"
                   iconColor="text-purple-400"
