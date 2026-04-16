@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .og-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated grid background */
+        .og-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+        }
+
+        .profile-section {
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+            object-fit: cover;
+            background: #2a2a3e;
+        }
+
+        .text-section {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 64px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .nickname {
+            color: rgba(59, 130, 246, 0.9);
+            font-weight: 600;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .skill-tag {
+            padding: 10px 20px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            color: rgba(59, 130, 246, 0.95);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .accent-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent);
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -80px;
+            left: -80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-card">
+        <div class="accent-circle circle-1"></div>
+        <div class="accent-circle circle-2"></div>
+
+        <div class="content">
+            <div class="profile-section">
+                <img src="public/profile.png" alt="Mohammad Bahrami" class="profile-image">
+            </div>
+
+            <div class="text-section">
+                <h1 class="name">Mohammad Bahrami <span class="nickname">(Miibo)</span></h1>
+                <h2 class="title">Digital Twin & Simulation Engineer</h2>
+
+                <div class="skills">
+                    <span class="skill-tag">ROS 2</span>
+                    <span class="skill-tag">AGV/AMR</span>
+                    <span class="skill-tag">Robotics</span>
+                    <span class="skill-tag">Automation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; color: #888; font-size: 14px;">
+        <p>Instructions:</p>
+        <p>1. Open browser DevTools (F12)</p>
+        <p>2. Press Ctrl+Shift+P (Cmd+Shift+P on Mac)</p>
+        <p>3. Type "Capture full size screenshot" or "Capture node screenshot"</p>
+        <p>4. Save as "og-image.png" in the public folder</p>
+        <p style="margin-top: 20px;">Alternative: Use browser zoom to 100% and use a screenshot tool to capture just the card</p>
+    </div>
+</body>
+</html>
