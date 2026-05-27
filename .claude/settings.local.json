@@ -29,7 +29,10 @@
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout main)",
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout -b main)",
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash)",
-      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash pop)"
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash pop)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout --theirs .claude/settings.local.json)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io add .claude/settings.local.json)",
+      "Bash(git *)"
     ]
   }
 }
