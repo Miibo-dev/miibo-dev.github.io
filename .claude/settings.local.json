@@ -21,12 +21,15 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nFix TypeScript ref type error in Robot3D component\n\nInitialize meshRef with null to match expected ref type.\nThis fixes the build error in GitHub Actions.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nConfigure Next.js for static export to GitHub Pages\n\nAdd output: ''export'' to enable static site generation.\nAdd images.unoptimized for compatibility with static hosting.\nThis creates the /out folder needed for GitHub Pages deployment.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit:*)",
-      "Bash(identify:*)",
-      "Bash(where:*)",
-      "Bash(git rev-parse:*)",
-      "Bash(gh run list:*)",
-      "Bash(ls:*)",
-      "Bash(curl:*)"
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(grep -v \"^\\\\.next$\")",
+      "Bash(grep -v \"^out$\")",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io status)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io diff --stat HEAD)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout main)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout -b main)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash)",
+      "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash pop)"
     ]
   }
 }
