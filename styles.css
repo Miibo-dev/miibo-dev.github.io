@@ -116,14 +116,10 @@ img { max-width: 100%; display: block; }
 }
 .brand .mark {
   width: 22px; height: 22px;
-  position: relative;
-  border: 1.5px solid var(--accent);
+  display: block;
+  flex-shrink: 0;
+  color: var(--accent);
 }
-.brand .mark::before, .brand .mark::after {
-  content: ""; position: absolute; background: var(--accent);
-}
-.brand .mark::before { left: 50%; top: -4px; bottom: -4px; width: 1.5px; transform: translateX(-50%); }
-.brand .mark::after  { top: 50%; left: -4px; right: -4px; height: 1.5px; transform: translateY(-50%); }
 .brand .sep { color: var(--ink-4); margin: 0 -4px; }
 .brand .alias { color: var(--accent); font-style: italic; font-family: var(--serif); font-size: 14px; letter-spacing: 0; text-transform: none; }
 

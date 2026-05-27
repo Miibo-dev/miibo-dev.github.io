@@ -32,7 +32,14 @@
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io stash pop)",
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io checkout --theirs .claude/settings.local.json)",
       "Bash(git -C /c/Workspace/GitPages/miibo-dev.github.io add .claude/settings.local.json)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(Get-ChildItem -Path \"D:\\\\Git_Repositories\\\\miibo-dev.github.io\" -Recurse -Exclude \".git\" -File)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(gunzip)",
+      "Bash(tar -x -O portfolio/project/index.html)",
+      "Bash(tar -t)",
+      "Bash(tar -x -O portfolio/project/favicon.svg)"
     ]
   }
 }
