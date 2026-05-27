@@ -320,10 +320,7 @@ img { max-width: 100%; display: block; }
   min-height: 100vh;
   padding-top: 110px;
   padding-bottom: 90px;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: clamp(40px, 6vw, 90px);
-  align-items: center;
+  display: block;
   position: relative;
 }
 
@@ -532,8 +529,7 @@ h1.hero-name .last {
 }
 
 @media (max-width: 880px) {
-  .hero { grid-template-columns: 1fr; gap: 60px; padding-top: 96px; }
-  .hero-sim-wrap { justify-self: start; max-width: 360px; }
+  .hero { padding-top: 96px; }
 }
 
 /* ============================================================
@@ -999,6 +995,16 @@ h1.hero-name .last {
 @media (max-width: 720px) {
   .role-header { grid-template-columns: 1fr; gap: 8px; }
   .role-body { grid-column: 1; }
+}
+
+@media (max-width: 640px) {
+  .rail {
+    position: static;
+    margin-bottom: 16px;
+  }
+  .section-content {
+    padding-top: 16px;
+  }
 }
 
 /* ============================================================
@@ -1623,6 +1629,9 @@ h1.hero-name .last {
   align-items: center;
   gap: 10px;
   font-weight: 500;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  min-width: 0;
 }
 .contact-link .cval .arrow {
   margin-left: auto;
