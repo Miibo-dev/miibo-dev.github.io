@@ -119,7 +119,9 @@ img { max-width: 100%; display: block; }
   display: block;
   flex-shrink: 0;
   color: var(--accent);
+  transition: transform .4s ease;
 }
+.brand:hover .mark { transform: rotate(-90deg); }
 .brand .sep { color: var(--ink-4); margin: 0 -4px; }
 .brand .alias { color: var(--accent); font-style: italic; font-family: var(--serif); font-size: 14px; letter-spacing: 0; text-transform: none; }
 
