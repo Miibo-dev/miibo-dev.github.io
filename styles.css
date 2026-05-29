@@ -591,6 +591,16 @@ h1.hero-name .last {
   line-height: 1.55;
 }
 
+@media (max-width: 640px) {
+  .chapter-inner {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .chapter-num {
+    padding-top: 0;
+  }
+}
+
 .chapter-rule {
   margin: 28px auto 0;
   max-width: calc(var(--max-w) - 2 * var(--gutter));
